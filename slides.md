@@ -61,6 +61,7 @@ layout: center
 - Stare at the kettle, waiting for the water to be boiled?
 - No! You want to study!
 - Then how can you know it when it's done?
+- Use a whistle!
 
 ---
 
@@ -103,20 +104,6 @@ layout: center
 - Peripherals interrupt CPU when completed
 
 ---
-
-# Back To The Example
-
-<!-- 这一页感觉可以不要 -->
-
-<v-clicks>
-
-- Why not setup a timer on my phone
-  - and check the water when time is up?
-- This is also interrupt!
-
-</v-clicks>
-
----
 layout: center
 ---
 
@@ -127,3 +114,76 @@ layout: center
 # No!
 
 </v-click>
+
+---
+
+# Problem 1: Slower
+
+<v-clicks>
+
+- Much slower than polling
+- Water boiling example:
+  - Go back and forth between study room and kitchen
+- Context switch
+
+</v-clicks>
+
+---
+
+# Solution: Interrupt + Polling
+
+<v-clicks>
+
+- Network example:
+  - Interrupt for the first packet
+  - Polling for the remaining packets
+- Realworld example:
+  - Chatting on your phone
+
+</v-clicks>
+
+---
+
+# Problem 2: Occupy the CPU
+
+<div v-click="2">
+
+<img src="" alt="手绘人在倒水" align="right" style="width: 50%;" />
+
+</div>
+
+<div v-click="1">
+
+- Water boiling example:
+  - Can't be interrupted when pouring water
+
+</div>
+
+<div v-click="3">
+
+- Other interrupts are MASKED during the processing of a previous one
+
+</div>
+<div v-click="4">
+
+- Affect the performance of other tasks
+
+</div>
+
+---
+
+# Solution: Top Half + Bottom Half
+
+<v-clicks>
+
+1. Do the most necessary things with interrupt masked - top half
+2. Unmask interrupt
+3. Finish the remaining work - bottom half
+
+</v-clicks>
+
+---
+layout: center
+---
+
+# Thank You!
