@@ -115,18 +115,35 @@ layout: center
 
 </v-click>
 
+<!--
+So, is that perfect?
+Is the interrupt mechanism described just now perfect for the communication between CPU and peripherals?
+
+No! There are some problems with it. And, of course, there are also solutions for these problems.
+-->
+
 ---
 
-# Problem 1: Slower
+# Problem 1: Slow
 
 <v-clicks>
 
 - Much slower than polling
 - Water boiling example:
-  - Go back and forth between study room and kitchen
+  - Walk from study room to kitchen
 - Context switch
 
 </v-clicks>
+
+<!--
+The first problem is slow. The interrupt mechanism is much slower than polling.
+
+Take the water boiling example, when the water is boiled, you have to go back to the kitchen from your study room, to "handle the interrupt". That needs more time than just sitting there and waiting for it.
+
+This is called "context switch" in computer systems. The CPU has to switch from the context of the current application task to another context which is used to handle the interrupt.
+
+That's why interrupt is slow.
+-->
 
 ---
 
@@ -134,13 +151,17 @@ layout: center
 
 <v-clicks>
 
-- Network example:
+- Network card example:
   - Interrupt for the first packet
   - Polling for the remaining packets
-- Realworld example:
-  - Chatting on your phone
 
 </v-clicks>
+
+<!--
+And of course we have some solutions, one of which is interrupt + polling.
+
+Let's use network card as an example. In modern network card drivers, if many packets arrive at once, or very closely, the CPU will only be interrupted for only one time, by the first packet, and then the drivers will use polling to get the remaining packets, to ensure the performance.
+-->
 
 ---
 
@@ -158,7 +179,6 @@ layout: center
   - Can't be interrupted when pouring water
 
 </div>
-
 <div v-click="3">
 
 - Other interrupts are MASKED during the processing of a previous one
@@ -166,9 +186,17 @@ layout: center
 </div>
 <div v-click="4">
 
-- Affect the performance of other tasks
+- Affect the performance of other urgent tasks
 
 </div>
+
+<!--
+Another problem is that, an interrupt will occupy the CPU. That means, when handling an interrupt, the CPU can't be interrupted by other interrupts.
+
+Recall the water boiling example, when you are pouring water from the kettle to a thermos bottle, you cannot be interrupted.
+
+In computer systems, we say that other interrupts are masked during the processing of a previous one. And that will affect the performance of other urgent tasks.
+-->
 
 ---
 
@@ -176,14 +204,26 @@ layout: center
 
 <v-clicks>
 
-1. Do the most necessary things with interrupt masked - top half
-2. Unmask interrupt
-3. Finish the remaining work - bottom half
+1. Do the most necessary things with interrupt masked - Top Half
+2. Unmask other interrupts
+3. Finish the remaining work - Bottom Half
 
 </v-clicks>
+
+<!--
+Again, when there is a problem, there is a solution.
+
+In Linux operating system, this problem is solved by splitting the interrupt handling process into two stages, the Top Half and the Bottom Half.
+
+When interrupt occurs, the Linux kernel will first do the most necessary things with other interrupts masked. That is the Top Half. Then it will unmask other interrupts. Finally it will finish the remaining work, and this is called Bottom Half. During the Bottom Half, the CPU can be nestedly interrupted again, so other interrupts can be handled as soon as possible.
+-->
 
 ---
 layout: center
 ---
 
 # Thank You!
+
+<!--
+So that's all of our presentation. Thank you very much!
+-->
