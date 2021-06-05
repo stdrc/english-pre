@@ -1,11 +1,18 @@
 ---
 theme: default
 layout: cover
+title: Interrupt
 ---
 
 # Interrupt
 
 Presented by Yibo Huang & Yuchao Qian
+
+<!--
+Hello everybody.
+My name is Huang Yibo and my teammate's name is Qian Yuchao.
+Today our group is going to talk about the interrupt in computer science.
+-->
 
 ---
 layout: center
@@ -19,11 +26,21 @@ layout: center
 
 </v-click>
 
+<!--
+So, in computer science, what is interrupt ? 
+And, why we need it ?
+To answer these two questions, I'm going to give you a vivid example.
+-->
+
 ---
 
 # Example: Boiling A Kettle Of Water
 
 <img src="" alt="手绘桌子上一个烧水壶" align="middle" style="width: 70%;" />
+
+<!--
+There is a kettle of water on the desk. Please imagine that we are currently boiling a kettle of water.
+-->
 
 ---
 
@@ -36,6 +53,13 @@ layout: center
 - Stare at the kettle, waiting for the water to be boiled?
 
 </v-click>
+
+<!--
+Now given that we are boiling a kettle of water, we should turn it off  when the water boils.
+There're several ways to do it.
+First, we just stare at the kettle, waiting for the water to be boiled.
+Is this solution feasible ?
+-->
 
 ---
 
@@ -52,6 +76,11 @@ layout: center
 
 </v-click>
 
+<!--
+Absolutely, Not !
+Because you want to study instead of wasting your time just staring at the kettle !
+-->
+
 ---
 
 # What Do You Do When The Kettle Is Boiling?
@@ -62,6 +91,13 @@ layout: center
 - No! You want to study!
 - Then how can you know it when it's done?
 - Use a whistle!
+
+<!--
+Then how can you know it when it's done ?
+We can use a whistle.
+When the kettle boils, it blows the whistle.
+And then we hear the whistle so we know it's time to turn it off.
+-->
 
 ---
 
@@ -75,6 +111,14 @@ layout: center
   - Disks
   - Ethernet cards
   - ...
+
+<!--
+The computer systems is just the same!
+In the last example, we ourselves are like cpu, and the kettle is like a peripheral.
+Just like we should turn the kettle off when it is boiled.
+The cpu also should handle some events that occur on the peripherals.
+For example, when we press the keyboard, the cpu must know this and display the character we pressed on the screen.
+-->
 
 ---
 
@@ -90,6 +134,13 @@ layout: center
 - Easy to implement
 - Cannot do other things during polling
 
+<!--
+In computer systems. There are also two ways to do it.
+The first way is called "POLLING". It is an silly and naive approach. 
+It's just like the first approach of the last example. The cpu just keeps watching at the Peripheral waiting for a event to occur at the peripheral.
+Apparently, this approach is very easy to implement but the cpu cannot do other things during polling.
+-->
+
 ---
 
 # Interrupt - A Smarter Approach
@@ -102,6 +153,12 @@ layout: center
 
 - CPU can do other things during I/O
 - Peripherals interrupt CPU when completed
+
+<!--
+So In order to overcome these shortcomings, the interrupt is invented !
+Just like the second approach of the last example. the interrupt is like a whistle. When an event occurs at a peripheral, the peripheral will send an interrupt to the cpu. When the cpu receives this interrupt, it knows that it's time to handle this event.
+So that using this approach, the cpu could do other things during I/O. This can lead to a huge performance improvement
+-->
 
 ---
 layout: center
