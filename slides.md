@@ -36,7 +36,7 @@ To answer these two questions, I'm going to give you a vivid example.
 
 # Example: Boiling A Kettle Of Water
 
-<img src="" alt="手绘桌子上一个烧水壶" align="middle" style="width: 70%;" />
+<img src="/images/kettle.png" alt="手绘桌子上一个烧水壶" style="width: 60%; margin: auto;" />
 
 <!--
 There is a kettle of water on the desk. Please imagine that we are currently boiling a kettle of water.
@@ -48,7 +48,7 @@ There is a kettle of water on the desk. Please imagine that we are currently boi
 
 <v-click>
 
-<img src="" alt="手绘一个人坐在烧水壶旁边呆呆地等" align="right" style="width: 50%" />
+<img src="/images/waiting-for-kettle.png" alt="手绘一个人坐在烧水壶旁边呆呆地等" align="right" style="width: 60%" />
 
 - Stare at the kettle, waiting for the water to be boiled?
 
@@ -65,7 +65,7 @@ Is this solution feasible ?
 
 # What Do You Do When The Kettle Is Boiling?
 
-<img src="" alt="手绘一边是水壶，另一个房间是人在看书" align="right" style="width: 50%" />
+<img src="/images/kitchen-study-room.png" alt="手绘一边是水壶，另一个房间是人在看书" align="right" style="width: 60%" />
 
 - Stare at the kettle, waiting for the water to be boiled?
 - No! You want to study!
@@ -85,7 +85,7 @@ Because you want to study instead of wasting your time just staring at the kettl
 
 # What Do You Do When The Kettle Is Boiling?
 
-<img src="" alt="手绘一边是水壶，水壶上一个哨子，另一个房间是人在看书" align="right" style="width: 50%" />
+<img src="/images/kettle-with-whistle.png" alt="手绘一边是水壶，水壶上一个哨子，另一个房间是人在看书" align="right" style="width: 60%" />
 
 - Stare at the kettle, waiting for the water to be boiled?
 - No! You want to study!
@@ -103,7 +103,7 @@ And then we hear the whistle so we know it's time to turn it off.
 
 # Computer Systems
 
-<img src="" alt="各种外设的图片" align="right" style="width: 50%;" />
+<img src="/images/peripherals.jpg" alt="各种外设的图片" align="right" style="width: 50%;" />
 
 - CPU has to communicate with peripherals
   - Keyboards
@@ -126,7 +126,7 @@ For example, when we press the keyboard, the cpu must know this and display the 
 
 <v-click>
 
-<img src="" alt="手绘一个人坐在烧水壶旁边呆呆地等，人头上放个 CPU，水壶上放个外设" align="right" style="width: 50%;" />
+<img src="/images/cpu-waiting-for-peripheral.png" alt="手绘一个人坐在烧水壶旁边呆呆地等，人头上放个 CPU，水壶上放个外设" align="right" style="width: 60%;" />
 
 </v-click>
 
@@ -147,7 +147,7 @@ Apparently, this approach is very easy to implement but the cpu cannot do other 
 
 <v-click>
 
-<img src="" alt="手绘水壶外设+哨子中断控制器+书房CPU" align="right" style="width: 50%;" />
+<img src="/images/cpu-peripheral-interrupt.png" alt="手绘水壶外设+哨子中断控制器+书房CPU" align="right" style="width: 60%;" />
 
 </v-click>
 
@@ -226,7 +226,7 @@ Let's use network card as an example. In modern network card drivers, if many pa
 
 <div v-click="2">
 
-<img src="" alt="手绘人在倒水" align="right" style="width: 50%;" />
+<img src="/images/pouring-water.png" alt="手绘人在倒水" align="right" style="width: 50%;" />
 
 </div>
 
