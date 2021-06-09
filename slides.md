@@ -4,14 +4,16 @@ layout: cover
 title: Interrupt
 ---
 
-# Interrupt
+# The Interrupt Mechanism in Computer
 
 Presented by Yibo Huang & Yuchao Qian
 
 <!--
-Hello everybody.
+Good morning everybody.
+
 My name is Huang Yibo and my teammate's name is Qian Yuchao.
-Today our group is going to talk about the interrupt in computer science.
+
+Today our group is going to talk about the interrupt mechanism in computer systems.
 -->
 
 ---
@@ -27,8 +29,10 @@ layout: center
 </v-click>
 
 <!--
-So, in computer science, what is interrupt ? 
-And, why we need it ?
+So, in computer systems, what is interrupt?
+
+And, why we need it?
+
 To answer these two questions, I'm going to give you a vivid example.
 -->
 
@@ -55,10 +59,13 @@ There is a kettle of water on the desk. Please imagine that we are currently boi
 </v-click>
 
 <!--
-Now given that we are boiling a kettle of water, we should turn it off  when the water boils.
+Now given that we are boiling a kettle of water, we should turn it off when the water boils.
+
 There're several ways to do it.
+
 First, we just stare at the kettle, waiting for the water to be boiled.
-Is this solution feasible ?
+
+Is this solution feasible?
 -->
 
 ---
@@ -77,8 +84,9 @@ Is this solution feasible ?
 </v-click>
 
 <!--
-Absolutely, Not !
-Because you want to study instead of wasting your time just staring at the kettle !
+Absolutely, Not!
+
+Because you want to study instead of wasting your time just staring at the kettle!
 -->
 
 ---
@@ -94,8 +102,11 @@ Because you want to study instead of wasting your time just staring at the kettl
 
 <!--
 Then how can you know it when it's done ?
+
 We can use a whistle.
+
 When the kettle boils, it blows the whistle.
+
 And then we hear the whistle so we know it's time to turn it off.
 -->
 
@@ -114,9 +125,13 @@ And then we hear the whistle so we know it's time to turn it off.
 
 <!--
 The computer systems is just the same!
+
 In the last example, we ourselves are like cpu, and the kettle is like a peripheral.
+
 Just like we should turn the kettle off when it is boiled.
+
 The cpu also should handle some events that occur on the peripherals.
+
 For example, when we press the keyboard, the cpu must know this and display the character we pressed on the screen.
 -->
 
@@ -136,8 +151,11 @@ For example, when we press the keyboard, the cpu must know this and display the 
 
 <!--
 In computer systems. There are also two ways to do it.
+
 The first way is called "POLLING". It is an silly and naive approach. 
+
 It's just like the first approach of the last example. The cpu just keeps watching at the Peripheral waiting for a event to occur at the peripheral.
+
 Apparently, this approach is very easy to implement but the cpu cannot do other things during polling.
 -->
 
@@ -155,9 +173,13 @@ Apparently, this approach is very easy to implement but the cpu cannot do other 
 - Peripherals interrupt CPU when completed
 
 <!--
-So In order to overcome these shortcomings, the interrupt is invented !
+So In order to overcome these shortcomings, the interrupt is invented!
+
 Just like the second approach of the last example. the interrupt is like a whistle. When an event occurs at a peripheral, the peripheral will send an interrupt to the cpu. When the cpu receives this interrupt, it knows that it's time to handle this event.
-So that using this approach, the cpu could do other things during I/O. This can lead to a huge performance improvement
+
+So that using this approach, the cpu could do other things during I/O. This can lead to a huge performance improvement.
+
+Next, my partenr will discuss some issues of the interrupt mechanism.
 -->
 
 ---
