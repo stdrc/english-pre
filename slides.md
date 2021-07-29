@@ -1,4 +1,6 @@
 ---
+routerMode: hash
+colorSchema: light
 theme: default
 layout: cover
 title: Interrupt
